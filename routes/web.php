@@ -23,9 +23,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('alojamientos', 'AlojamientosController');
+Route::group(['middleware' => ['permission:ver_alojamientos|crear_alojamientos|editar_alojamientos|borrar_alojamientos']], function () {
+    Route::resource('alojamientos', 'AlojamientosController');
+    Route::post('alojamientos/update', 'AlojamientosController@update')->name('alojamientos.update');
+    Route::get('alojamientos/destroy/{id}', 'AlojamientosController@destroy');
+});
 
-Route::post('alojamientos/update', 'AlojamientosController@update')->name('alojamientos.update');
 
-Route::get('alojamientos/destroy/{id}', 'AlojamientosController@destroy');
+
 

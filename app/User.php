@@ -9,11 +9,14 @@ use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia\HasMedia;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Spatie\MediaLibrary\Models\Media;
+use Spatie\Permission\Traits\HasRoles;
+
 
 class User extends Authenticatable implements HasMedia
 {
     use HasMediaTrait;
     use Notifiable;
+    use HasRoles;
 
     /**
      * The attributes that are mass assignable.
