@@ -15,11 +15,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a113da5f-c28e-4984-967c-160a1f046607" name="Default Changelist" comment="Prueba de Pagina profiles con MediaLibrary">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AvatarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AvatarController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +186,8 @@
       <updated>1603353693929</updated>
       <workItem from="1603353694998" duration="13012000" />
       <workItem from="1603445976971" duration="1323000" />
-      <workItem from="1603449316930" duration="8700000" />
+      <workItem from="1603449316930" duration="8732000" />
+      <workItem from="1603695744513" duration="6517000" />
     </task>
     <task id="LOCAL-00001" summary="Proyecto">
       <created>1603354208108</created>
@@ -224,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603456044643</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Prueba de Pagina profiles con MediaLibrary">
+      <created>1603462946728</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1603462946728</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,15 +297,15 @@
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state x="2095" y="380" key="SymfonyComponentCompositeDataDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603367936612" />
-    <state x="393" y="177" key="Vcs.Push.Dialog.v2" timestamp="1603456108272">
+    <state x="393" y="177" key="Vcs.Push.Dialog.v2" timestamp="1603462951670">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="1918" y="253" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1603368315821" />
-    <state x="393" y="177" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1603456108272" />
-    <state x="391" y="81" width="583" height="566" key="find.popup" timestamp="1603461727347">
+    <state x="393" y="177" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1603462951670" />
+    <state x="391" y="81" width="583" height="566" key="find.popup" timestamp="1603702761771">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="391" y="81" width="583" height="566" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1603461727347" />
+    <state x="391" y="81" width="583" height="566" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1603702761771" />
     <state x="1982" y="240" width="672" height="677" key="run.anything.popup" timestamp="1603367974950">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>

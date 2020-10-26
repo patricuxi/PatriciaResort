@@ -24,7 +24,7 @@ class User extends Authenticatable implements HasMedia
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','avatar_id'
     ];
 
     /**
@@ -60,6 +60,7 @@ class User extends Authenticatable implements HasMedia
 //            ->acceptsFile(function (File $file) {
 //                return $file->mimeType === 'image/jpeg' || $file->mimeType === 'image/png';
 //            });
+
     }
     //si nuestro modelo tiene conversiones de las imagenes que le guardamos van especificadas aqui.
     public function registerMediaConversions(Media $media = null)
@@ -74,5 +75,19 @@ class User extends Authenticatable implements HasMedia
             //añadimos el nombre de las colecciones de usuarios a las cuales se le creara esta miniatura.
             ->performOnCollections('avatars')
         ;
+
+        $this->addMediaConversion('thumb')
+            //modificadores aplicados para crear la miniatura
+            ->width(200)
+            ->height(200)
+        ;
+    }
+
+    public function avatar(){
+        return $this->hasOne(Media::class,'id','avatar_id');
+    }
+
+    public function  getAvatarUrlAttribute(){
+        return $this->avatar->getUrl('thumb');
     }
 }
