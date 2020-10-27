@@ -22,6 +22,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+//Route::view('alojamientos','alojamientos');
+Route::get('profile','AvatarController@index')->name('profile');
+
+
+Route::resource('avatar', 'AvatarController');
+
 
 Route::group(['middleware' => ['permission:ver_alojamientos|crear_alojamientos|editar_alojamientos|borrar_alojamientos']], function () {
     Route::resource('alojamientos', 'AlojamientosController');
