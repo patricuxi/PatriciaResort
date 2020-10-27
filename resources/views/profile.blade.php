@@ -21,7 +21,7 @@
     </div>
         <div class="card-columns">
             @foreach($avatars as $avatar)
-            <div class="card">
+          <div class="card">
                 <img class="card-img-top" src="{{$avatar->getUrl('thumb')}}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Card title that wraps to a new line</h5>

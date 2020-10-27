@@ -55,6 +55,20 @@ return [
             'visibility' => 'public',
         ],
 
+        'users_avatar' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/avatars'),
+            'url' => env('APP_URL').'/storage/avatars',
+            'visibility' => 'public',
+        ],
+
+        'images_alojamientos' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/alojamientos'),
+            'url' => env('APP_URL').'/storage/alojamientos',
+            'visibility' => 'public',
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

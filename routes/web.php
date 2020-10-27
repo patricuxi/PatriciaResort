@@ -27,6 +27,8 @@ Route::get('profile','AvatarController@index')->name('profile');
 
 
 Route::resource('avatar', 'AvatarController');
+Route::resource('alojamiento', 'ImagesAlojamientosController');
+
 
 
 Route::group(['middleware' => ['permission:ver_alojamientos|crear_alojamientos|editar_alojamientos|borrar_alojamientos']], function () {

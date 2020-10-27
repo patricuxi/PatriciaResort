@@ -74,7 +74,7 @@
     <br/>
     @can('crear_alojamientos')
     <div align="right">
-        <button type="button" name="create_record" id="create_record" class="btn btn-success btn-sm">Añadir usuario
+        <button type="button" name="create_record" id="create_record" class="btn btn-success btn-sm">Añadir alojamiento
         </button>
     </div>
     @endcan
@@ -82,6 +82,7 @@
     <table id="alojamientos" class="table table-bordered yajra-datatable">
         <thead>
         <tr>
+            <th>Imagen</th>
             <th>Nombre</th>
             <th>Descripcion</th>
             <th>Tipo</th>
@@ -143,6 +144,22 @@
                         </div>
                     </div>
                     <br/>
+                    <div class="row">
+                        <form action="{{route('alojamiento.store')}}" method="post" enctype="multipart/form-data">
+                            @csrf
+                            <div class="input-group mb-3 col-md-9">
+                                <div class="custom-file">
+                                    <input type="file" name="alojamiento" class="custom-file-input" id="inputGroupFile01">
+                                    <label class="custom-file-label" for="inputGroupFile01">Elegir imagen</label>
+                                </div>
+                            </div>
+                            <div class="input-group mb-3 col-md-9">
+
+                            <input type="submit" value="Subir imagen" class="btn btn-success ml-4">
+                            </div>
+                        </form>
+                    </div>
+                    <br/>
                     <div class="form-group" align="center">
                         <input type="hidden" name="action" id="action" value="Add"/>
                         <input type="hidden" name="hidden_id" id="hidden_id"/>
@@ -193,6 +210,10 @@
             url: "{{ route('alojamientos.index') }}",
         },
         columns: [
+            {
+                data: 'alojamiento_id',
+                name: 'alojamiento_id'
+            },
             {
                 data: 'nombre',
                 name: 'nombre'

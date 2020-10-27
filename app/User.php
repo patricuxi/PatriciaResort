@@ -54,12 +54,13 @@ class User extends Authenticatable implements HasMedia
             //esta coleccion solo permite un unico fichero, por tanto cuando se suba otro fichero se reemplazara por el mas reciente
            // ->singleFile()
             //indica el disco a utilizar para guardar la imagen
-           // ->useDisk('users_avatar')
+           ->useDisk('users_avatar')
             //filtro que se le aplicaran al fichero, en este caso solo se aceptan imagenes  jpeg y png
             ->acceptsMimeTypes(['image/jpeg','image/png']);
 //            ->acceptsFile(function (File $file) {
 //                return $file->mimeType === 'image/jpeg' || $file->mimeType === 'image/png';
 //            });
+
 
     }
     //si nuestro modelo tiene conversiones de las imagenes que le guardamos van especificadas aqui.
@@ -81,13 +82,26 @@ class User extends Authenticatable implements HasMedia
             ->width(200)
             ->height(200)
         ;
+        $this->addMediaConversion('avatar')
+            //modificadores aplicados para crear la miniatura
+            ->width(100)
+            ->height(100)
+        ;
+        $this->addMediaConversion('card')
+            //modificadores aplicados para crear la miniatura
+            ->width(100)
+            ->height(100)
+        ;
+
     }
 
-    public function avatar(){
-        return $this->hasOne(Media::class,'id','avatar_id');
-    }
+        public function avatar(){
+            return $this->hasOne(Media::class,'id','avatar_id');
+        }
+
 
     public function  getAvatarUrlAttribute(){
-        return $this->avatar->getUrl('thumb');
-    }
+            return $this->avatar->getURL('thumb');
+        }
+
 }

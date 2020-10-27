@@ -12,7 +12,7 @@ class AlojamientosController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Responseu
      */
     public function index(Request $request)
     {
